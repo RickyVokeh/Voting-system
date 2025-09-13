@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("../includes/config.php");
+include("includes/config.php");
 
 // Redirect if not logged in as voter
 if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] !== 'voter') {
@@ -73,7 +73,7 @@ if ($voter_status['has_voted']) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voting Interface</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css/voting.cs">
+    <link rel="stylesheet" href="assets/css/voting.cs">
     <style>
         /* Voting Interface Styles */
 :root {
