@@ -1,0 +1,249 @@
+ :root {
+     --primary: #f5ae16;
+     --secondary: #eec56e;
+     --accent: #6a964d;
+     --light: #f5f5f5;
+     --dark: #1d1c1c;
+     --success: #28a745;
+     --danger: #dc3545;
+     --warning: #ffc107;
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ body {
+     background-color: #f8f9fa;
+     color: var(--dark);
+     line-height: 1.6;
+ }
+
+ .container {
+     width: 100%;
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 0 20px;
+ }
+
+ header {
+     background-color: #ffc107;
+     color: rgb(33, 49, 24);
+     padding: 1rem 0;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
+
+ header h1 {
+     text-align: center;
+     font-size: 2rem;
+ }
+
+ .hero {
+     text-align: center;
+     padding: 3rem 1rem;
+     background: #f2f5f5;
+     color: rgb(39, 36, 36);
+     border-radius: 0 0 20px 20px;
+     margin-bottom: 2rem;
+ }
+
+ .hero h2 {
+     font-size: 1.5rem;
+     margin-bottom: 1rem;
+ }
+
+ .hero p {
+     font-size: 1.2rem;
+     max-width: 800px;
+     margin: 0 auto;
+ }
+
+ .login-options {
+     display: flex;
+     justify-content: center;
+     gap: 3rem;
+     flex-wrap: wrap;
+     margin: 2rem 0;
+ }
+
+ .login-card {
+     background: white;
+     border-radius: 20px;
+     padding: 2rem;
+     width: 300px;
+     text-align: center;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+     transition: transform 0.3s ease;
+     -webkit-border-radius: 20px;
+     -moz-border-radius: 20px;
+     -ms-border-radius: 20px;
+     -o-border-radius: 20px;
+ }
+
+ .login-card:hover {
+     transform: translateY(-5px);
+     -webkit-transform: translateY(-5px);
+     -moz-transform: translateY(-5px);
+     -ms-transform: translateY(-5px);
+     -o-transform: translateY(-5px);
+ }
+
+ .login-card h3 {
+     color: #274b26;
+     margin-bottom: 1.5rem;
+     font-size: 1.5rem;
+ }
+
+ .login-card p {
+     margin-bottom: 1.5rem;
+     color: #1a1919;
+ }
+
+ .btn {
+     display: inline-block;
+     padding: 0.8rem 1.5rem;
+     background-color: #46aef3;
+     color: white;
+     text-decoration: none;
+     border-radius: 5px;
+     font-weight: 600;
+     transition: background-color 0.3s ease;
+     border: none;
+     cursor: pointer;
+ }
+
+ .btn:hover {
+     background-color: #f1bc28;
+ }
+
+ .btn-admin {
+     background-color: #46aef3;
+ }
+
+ .btn-admin:hover {
+     background-color: #f7b90f;
+ }
+
+ .features {
+     padding: 3rem 0;
+     background-color: white;
+     border-radius: 20px;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+     margin-bottom: 2rem;
+ }
+
+ .features h2 {
+     text-align: center;
+     margin-bottom: 2rem;
+     color: #133615;
+ }
+
+ .feature-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 2rem;
+     padding: 0 2rem;
+ }
+
+ .feature-grid:hover {
+     transform: translateY(-5px);
+ }
+
+ .feature {
+     text-align: center;
+     padding: 1.5rem;
+     border-radius: 10px;
+     background-color: var(--light);
+     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+ }
+
+ .feature h3 {
+     color: #1f6122;
+     margin-bottom: 1rem;
+ }
+
+ footer {
+     text-align: center;
+     padding: 2rem 0;
+     background-color: #f08306;
+     color: white;
+     border-radius: 20px 20px 0 0;
+     margin-top: 2rem;
+ }
+
+ /* Modal styles */
+ .modal {
+     display: none;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.7);
+     z-index: 1000;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .modal-content {
+     background-color: white;
+     padding: 2rem;
+     border-radius: 10px;
+     width: 90%;
+     max-width: 400px;
+     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+ }
+
+ .modal-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 1.5rem;
+ }
+
+ .close {
+     font-size: 1.5rem;
+     cursor: pointer;
+     color: #999;
+ }
+
+ .close:hover {
+     color: var(--dark);
+ }
+
+ .form-group {
+     margin-bottom: 1.5rem;
+ }
+
+ .form-group label {
+     display: block;
+     margin-bottom: 0.5rem;
+     font-weight: 600;
+ }
+
+ .form-group input {
+     width: 100%;
+     padding: 0.8rem;
+     border: 1px solid #ddd;
+     border-radius: 5px;
+     font-size: 1rem;
+ }
+
+ @media (max-width: 768px) {
+     .login-options {
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .hero h2 {
+         font-size: 2rem;
+     }
+
+     .hero p {
+         font-size: 1rem;
+
+     }
+ }
