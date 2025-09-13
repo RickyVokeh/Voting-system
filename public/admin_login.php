@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("../includes/config.php");
+include("includes/config.php");
 
 // Redirect if already logged in
 if (isset($_SESSION['user_type']) && $_SESSION['user_type'] === 'admin') {

@@ -1,6 +1,6 @@
 <?php
-include("../includes/config.php");
-include("../includes/auth_check.php");
+include("includes/config.php");
+include("includes/auth_check.php");
 
 // Initialize variables
 $message = "";
