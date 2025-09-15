@@ -28,7 +28,7 @@
                     <i class="fas fa-user-cog"></i>
                 </div>
                 <h3>Admin Login</h3>
-                <p>Access the admin dashboard to manage elections, candidates, and view results</p>
+                <p>Access the admin dashboard to manage elections ,candidates and results</p>
                 <button class="btn btn-admin" onclick="location.href='admin_login.php'">Admin Login</button>
             </div>
             
