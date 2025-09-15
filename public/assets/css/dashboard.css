@@ -40,7 +40,7 @@ body {
     background: #c4f08b;
     color: rgb(10, 10, 10);
     position: fixed;
-    height: 100vh;
+    height: 80vh;
     overflow-y: auto;
     transition: all 0.3s;
     z-index: 1000;
@@ -98,7 +98,7 @@ body {
 
 /* Header Styles */
 .admin-header {
-    background: white;
+    background: #429454;
     color: var(--dark);
     padding: 15px 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -139,7 +139,7 @@ body {
 }
 
 .btn-logout:hover {
-    background-color: #3b994f;
+    background-color: #f76f30;
 }
 
 /* Content Sections */
