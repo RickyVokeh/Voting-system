@@ -100,17 +100,17 @@ body {
 }
 
 .voting-container {
-    max-width: 1000px;
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0px 10px 20px 10px;
 }
 
 .voting-header {
     background: rgb(252, 165, 3);
     color: white;
-    padding: 35px 30px 35px 30px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    padding: 20px 40px 70px 60px;
+    border-radius: 5px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -143,7 +143,7 @@ body {
 .voting-content {
     background: white;
     border-radius: 10px;
-    padding: 25px;
+    padding: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -191,11 +191,11 @@ body {
 }
 
 .voting-instructions {
-    background-color: var(--light);
+    background-color: #a4bb95;
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 25px;
-    border-left: 4px solid var(--primary);
+    border-left: 4px solid #ffc107;
 }
 
 .voting-instructions h2 {
@@ -204,7 +204,7 @@ body {
 }
 
 .position-section {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     padding-bottom: 20px;
     border-bottom: 1px solid #eee;
 }
@@ -259,11 +259,11 @@ body {
 }
 
 .candidate-photo {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     object-fit: cover;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border: 3px solid #eee;
 }
 
@@ -336,7 +336,7 @@ body {
 <body>
     <div class="voting-container">
         <header class="voting-header">
-            <h1>Ics Technical College School Voting System</h1>
+            <h1>Ics Technical College Voting Interface.</h1>
             <div class="voter-info">
                 <span>Welcome, <?php echo $_SESSION['voter_name']; ?> </span>
                 <a href="voter_logout.php" class="btn-logout">Logout</a>
@@ -363,8 +363,11 @@ body {
                 <?php endif; ?>
                 
                 <div class="voting-instructions">
-                    <h2>Cast Your Vote</h2>
+                    <h2>Voting Instructions.</h2>
                     <p>Please select one candidate for each position. You can only vote once for each position.</p>
+                    <p>Before submitting your vote, confirm your choices first.</p>
+                    <p>Once submited, the votes cannot be changed.</p>
+                    <p>Vote for your prefered Candidate. Thank you!</p>
                 </div>
                 
                 <form id="votingForm" action="" method="post">
