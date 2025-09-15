@@ -17,6 +17,12 @@
     text-align: center;
 }
 
+hr {
+    width: 50%;
+    margin: 0 auto;
+    border: none;
+}
+
 
 .footer-info {
     margin-bottom: 15px;

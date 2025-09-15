@@ -6,9 +6,10 @@
 <footer class="footer">
     <div class="footer-content">
         <div class="footer-info">
-            <p><i class="fas fa-building"></i>Ics Technical College School Voting System Administration</p>
-            <p><i class="fas fa-clock"></i> Always Available for Election Management</p>
+            <p><i class="fas fa-building"></i>  Ics Technical College School Voting System Administration</p>
+            <p><i class="fas fa-clock"></i>  Always Available for Election Management</p>
         </div>
+        <hr>
         
         <div class="footer-copyright">
             <p>&copy; 2025 School Voting System. All rights reserved. | Made by Ricky Tech</p>
