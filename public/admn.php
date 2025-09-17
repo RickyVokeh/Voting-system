@@ -571,7 +571,9 @@ $active_section = isset($_GET['active_section']) ? $_GET['active_section'] : 'da
             </div>
         </div>
     </div>
-    
+    <?php
+    include("includes/footer.php")
+    ?>
 
     <script>
         // Sidebar navigation functionality
