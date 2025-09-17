@@ -37,10 +37,10 @@ body {
 /* Sidebar Styles */
 .sidebar {
     width: var(--sidebar-width);
-    background: #c4f08b;
+    background: #9ff08b;
     color: rgb(10, 10, 10);
     position: fixed;
-    height: 80vh;
+    height: 90vh;
     overflow-y: auto;
     transition: all 0.3s;
     z-index: 1000;
@@ -136,6 +136,7 @@ body {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    text-decoration: none;
 }
 
 .btn-logout:hover {
