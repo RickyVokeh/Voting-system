@@ -40,7 +40,7 @@ body {
     background: #9ff08b;
     color: rgb(10, 10, 10);
     position: fixed;
-    height: 90vh;
+    height: 83vh;
     overflow-y: auto;
     transition: all 0.3s;
     z-index: 1000;
