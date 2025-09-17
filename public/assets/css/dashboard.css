@@ -40,7 +40,7 @@ body {
     background: #9ff08b;
     color: rgb(10, 10, 10);
     position: fixed;
-    height: 83vh;
+    height: 81vh;
     overflow-y: auto;
     transition: all 0.3s;
     z-index: 1000;
@@ -237,7 +237,7 @@ body {
 
 /* Search Section Styles */
 .search-section {
-    background-color: #c4f08b;
+    background-color: #9de242;
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 25px;
@@ -245,7 +245,7 @@ body {
 }
 
 .search-section h3 {
-    color: rgb(44, 80, 34);
+    color: rgb(18, 27, 16);
     margin-bottom: 25px;
 }
 
@@ -394,7 +394,7 @@ body {
 
 /* File Upload */
 .file-upload {
-    background-color: rgb(163, 248, 170);
+    background-color: rgb(184, 226, 187);
     padding: 20px;
     border-radius: 8px;
     border: 2px dashed #ccc;
