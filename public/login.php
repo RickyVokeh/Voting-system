@@ -6,21 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Options with Icons</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background: grey;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
         }
         
         .login-options {
@@ -37,7 +29,7 @@
             border-radius: 15px;
             padding: 30px;
             width: 100%;
-            max-width: 380px;
+            max-width: 350px;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -141,6 +133,19 @@
     </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <h1>ICS Technical College</h1>
+            <h1>School Voting System 2025</h1>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="hero">
+            <h2>Secure Student Elections</h2>
+            <p><i>Cast your vote for student council positions in a secure and transparent manner. Your vote matters!</i></p>
+        </section>
+    
     <div class="login-options">
         <div class="login-card">
             <div class="icon-container admin-icon">
@@ -160,5 +165,27 @@
             <button class="btn" onclick="location.href='voter_login.php'">Voter Login</button>
         </div>
     </div>
+    <section class="features">
+            <h2>System Features</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>Secure Voting</h3>
+                    <p>Each voter can only vote once per position with secure authentication</p>
+                    <p>Each voter can only vote once and vote for only one candidate per position</p>
+                </div>
+                <div class="feature">
+                    <h3>Real-time Results</h3>
+                    <p>Elections results will be displayed once the votes are casted</p>
+                </div>
+                <div class="feature">
+                    <h3>Easy Management</h3>
+                    <p>UThe voting process is secure and the results cannot be manipulated</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <?php
+    include("includes/footer.php");
+    ?>
 </body>
 </html>
