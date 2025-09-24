@@ -3,32 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICS Technical College</title>
+    <title>School Voting System</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
     <script src="../assets/js/index.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>ICS Technical College</h1>
-            <h1>School Voting System 2025</h1>
+    <!-- Banner with Logo -->
+    <div class="banner">
+        <div class="banner-content">
+            <div class="logo">
+                <i class="fas fa-vote-yea"></i>
+            </div>
+            <div class="banner-text">
+                <h1>School Voting System</h1>
+                <p>Secure & Transparent Student Elections</p>
+            </div>
         </div>
-    </header>
+    </div>
     
-    <div class="container">
-        <section class="hero">
-            <h2>Secure Student Elections</h2>
-            <p><i>Cast your vote for student council positions in a secure and transparent manner. Your vote matters!</i></p>
-        </section>
-        
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h2>Welcome to Our Digital Voting Platform</h2>
+            <p>Empowering students to participate in fair, secure, and transparent elections. Cast your vote with confidence and help shape your school's future.</p>
+        </div>
+    </div>
+    
+    <!-- Main Content with Login Cards -->
+    <div class="main-content">
         <div class="login-options">
             <div class="login-card">
                 <div class="icon-container admin-icon">
                     <i class="fas fa-user-cog"></i>
                 </div>
                 <h3>Admin Login</h3>
-                <p>Access the admin dashboard to manage elections ,candidates and results</p>
+                <p>Access the admin dashboard to manage elections, candidates, and view results</p>
                 <button class="btn btn-admin" onclick="location.href='admin_login.php'">Admin Login</button>
             </div>
             
@@ -41,29 +51,38 @@
                 <button class="btn" onclick="location.href='voter_login.php'">Voter Login</button>
             </div>
         </div>
-        
-        <section class="features">
-            <h2>System Features</h2>
-            <div class="feature-grid">
+    </div>
+    
+    <!-- System Description Section -->
+    <div class="system-description">
+        <div class="description-content">
+            <h2>Why Choose Our Voting System?</h2>
+            <div class="features-grid">
                 <div class="feature">
-                    <h3>Secure Voting</h3>
-                    <p>Each voter can only vote once per position with secure authentication</p>
-                    <p>Each voter can only vote once and vote for only one candidate per position</p>
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Maximum Security</h3>
+                    <p>Advanced encryption and authentication ensure that every vote is secure and tamper-proof.</p>
                 </div>
                 <div class="feature">
-                    <h3>Real-time Results</h3>
-                    <p>Elections results will be displayed once the votes are casted</p>
+                    <i class="fas fa-bolt"></i>
+                    <h3>Fast & Efficient</h3>
+                    <p>Streamlined voting process with instant results calculation and real-time updates.</p>
                 </div>
                 <div class="feature">
-                    <h3>Easy Management</h3>
-                    <p>UThe voting process is secure and the results cannot be manipulated</p>
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile Friendly</h3>
+                    <p>Accessible on any device, allowing voters to participate from anywhere on campus.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Real-time Analytics</h3>
+                    <p>Comprehensive reporting and analytics for transparent election monitoring.</p>
                 </div>
             </div>
-        </section>
+        </div>
     </div>
-    <?php
-    include("includes/footer.php");
-    ?>
     
+    <?php include("includes/footer.php")
+    ?>
 </body>
 </html>
