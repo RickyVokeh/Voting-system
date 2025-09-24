@@ -407,7 +407,7 @@ if (isset($_GET['edit_candidate'])) {
                 </div>
                 <div class="menu-item <?php echo $active_section === 'voter-management' ? 'active' : ''; ?>" data-target="voter-management">
                     <i class="fas fa-users"></i>
-                    <span>Voters Management</span>
+                    <span>Registered voters</span>
                 </div>
                 <div class="submenu-item <?php echo $active_section === 'voter-search' ? 'active' : ''; ?>" data-target="voter-search">
                     <i class="fas fa-search"></i>
@@ -419,7 +419,7 @@ if (isset($_GET['edit_candidate'])) {
                 </div>
                 <div class="menu-item <?php echo $active_section === 'candidate-management' ? 'active' : ''; ?>" data-target="candidate-management">
                     <i class="fas fa-user-tie"></i>
-                    <span>Candidates Management</span>
+                    <span> Registered Candidates</span>
                 </div>
                 <div class="menu-item <?php echo $active_section === 'election-results' ? 'active' : ''; ?>" data-target="election-results">
                     <i class="fas fa-chart-bar"></i>
