@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['user_type'] = 'admin';
                 $_SESSION['admin_id'] = $row['admin_id'];
                 $_SESSION['username'] = $username;
-                header("Location: admn.php");
+                header("Location: admin_dashboard.php");
                 exit();
             } else {
                 $error = "Incorrect username or password, please try again";
