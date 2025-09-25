@@ -380,6 +380,7 @@ if (isset($_GET['edit_candidate'])) {
             cursor: pointer;
             margin-right: 5px;
             transition: background-color 0.3s;
+            text-decoration: none;
         }
 
         .btn-edit:hover {
@@ -485,7 +486,7 @@ if (isset($_GET['edit_candidate'])) {
                 
                 <!-- Individual Voter Addition Form -->
                 <div class="form-section">
-                    <h3>Add Individual Voter</h3>
+                    <h3>Add a Voter</h3>
                     <form method="POST" action="">
                         <div class="form-group">
                             <label for="voter_id">Voter ID:</label>
@@ -518,7 +519,7 @@ if (isset($_GET['edit_candidate'])) {
             <div class="content-section <?php echo $active_section === 'voter-management' ? 'active' : ''; ?>" id="voter-management">
                 <h2 class="section-title">Voter Management</h2>
                 
-                <!-- Edit Voter Form (shown when editing) -->
+                <!-- Edit Voter Form  -->
                 <?php if ($edit_voter_data): ?>
                 <div class="form-section">
                     <h3>Edit Voter</h3>
@@ -534,7 +535,7 @@ if (isset($_GET['edit_candidate'])) {
                             <input type="text" id="edit_name" name="name" class="form-control" required 
                                    value="<?php echo $edit_voter_data['name']; ?>">
                         </div>
-                        <button type="submit" name="edit_voter" class="btn btn-primary">Update Voter</button>
+                        <button type="submit" name="edit_voter" class="btn btn-primary">Save Changes</button>
                         <a href="?active_section=voter-management" class="btn btn-secondary">Cancel</a>
                     </form>
                 </div>
@@ -599,7 +600,7 @@ if (isset($_GET['edit_candidate'])) {
                 <?php endif; ?>
             </div>
 
-            <!-- Voter Search Section -->
+                        <!-- Voter Search Section -->
             <div class="content-section <?php echo $active_section === 'voter-search' ? 'active' : ''; ?>" id="voter-search">
                 <h2 class="section-title">Voter Search</h2>
                 
@@ -635,6 +636,13 @@ if (isset($_GET['edit_candidate'])) {
                                             <?php echo $voter_data['has_voted'] ? 'Voted' : 'Not Voted'; ?>
                                         </span>
                                     </p>
+                                    <div class="action-buttons">
+                                        <a href="?active_section=voter-management&edit_voter=<?php echo $voter_data['voter_id']; ?>" 
+                                           class="btn btn-edit">Edit Voter</a>
+                                        <a href="?delete_voter=<?php echo $voter_data['voter_id']; ?>&active_section=voter-search&voter_id=<?php echo $voter_data['voter_id']; ?>" 
+                                           class="btn btn-danger" 
+                                           onclick="return confirm('Are you sure you want to delete this voter?')">Delete Voter</a>
+                                    </div>
                                 </div>
                             </div>
                             <?php
@@ -651,6 +659,35 @@ if (isset($_GET['edit_candidate'])) {
                     }
                     ?>
                 </div>
+                
+                <!-- Edit Voter Form in Search Section -->
+                <?php if (isset($_GET['voter_id']) && !empty($_GET['voter_id']) && isset($_GET['edit_voter'])): 
+                    $edit_voter_id = $conn->real_escape_string(trim($_GET['edit_voter']));
+                    $edit_search_result = $conn->query("SELECT * FROM voters WHERE voter_id = '$edit_voter_id'");
+                    if ($edit_search_result && $edit_search_result->num_rows > 0) {
+                        $edit_voter_data = $edit_search_result->fetch_assoc();
+                    ?>
+                    <div class="form-section" style="margin-top: 30px;">
+                        <h3>Edit Voter (Search Result)</h3>
+                        <form method="POST" action="">
+                            <input type="hidden" name="original_voter_id" value="<?php echo $edit_voter_data['voter_id']; ?>">
+                            <input type="hidden" name="search_voter_id" value="<?php echo htmlspecialchars($_GET['voter_id']); ?>">
+                            <div class="form-group">
+                                <label for="edit_voter_id">Voter ID:</label>
+                                <input type="text" id="edit_voter_id" name="voter_id" class="form-control" required 
+                                       value="<?php echo $edit_voter_data['voter_id']; ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="edit_name">Full Name:</label>
+                                <input type="text" id="edit_name" name="name" class="form-control" required 
+                                       value="<?php echo $edit_voter_data['name']; ?>">
+                            </div>
+                            <button type="submit" name="edit_voter" class="btn btn-primary">Save Changes</button>
+                            <a href="?active_section=voter-search&voter_id=<?php echo htmlspecialchars($_GET['voter_id']); ?>" class="btn btn-secondary">Cancel</a>
+                        </form>
+                    </div>
+                    <?php } ?>
+                <?php endif; ?>
             </div>
 
             <!-- Add Candidates Section -->
