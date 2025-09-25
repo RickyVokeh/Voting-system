@@ -339,7 +339,7 @@ if (isset($_GET['edit_candidate'])) {
             margin-left: auto;
         }
 
-        /* Submenu Item Styles */
+       /* Submenu Item Styles */
         .submenu-item {
             padding: 12px 20px 12px 50px;
             display: flex;
@@ -347,25 +347,25 @@ if (isset($_GET['edit_candidate'])) {
             cursor: pointer;
             transition: all 0.3s;
             border-left: 4px solid transparent;
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.9rem;
+            color: #343a40;
+            font-size: 1rem;
         }
 
         .submenu-item:hover {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: #f09116;
             border-left-color: #f47a60;
             color: white;
         }
 
         .submenu-item.active {
-            background-color: rgba(255, 255, 255, 0.15);
+            background-color: #e48213;
             border-left-color: white;
-            color: white;
+            color: black            ;
         }
 
         .submenu-item i {
-            margin-right: 15px;
-            font-size: 1rem;
+            margin-right: 25px;
+            font-size: 1.3rem;
             width: 16px;
             text-align: center;
         }
