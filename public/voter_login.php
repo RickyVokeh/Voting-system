@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['user_type'] = 'voter';
                 $_SESSION['voter_id'] = $voter['voter_id'];
                 $_SESSION['voter_name'] = $voter['name'];
-                header("Location: voting.php");
+                header("Location: interface.php");
                 exit();
             }
         } else {
