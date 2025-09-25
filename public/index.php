@@ -56,7 +56,7 @@
     <!-- System Description Section -->
     <div class="system-description">
         <div class="description-content">
-            <h2>Why Choose Our Voting System?</h2>
+            <h2>System Features.</h2>
             <div class="features-grid">
                 <div class="feature">
                     <i class="fas fa-shield-alt"></i>
@@ -67,11 +67,6 @@
                     <i class="fas fa-bolt"></i>
                     <h3>Fast & Efficient</h3>
                     <p>Streamlined voting process with instant results calculation and real-time updates.</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Mobile Friendly</h3>
-                    <p>Accessible on any device, allowing voters to participate from anywhere on campus.</p>
                 </div>
                 <div class="feature">
                     <i class="fas fa-chart-bar"></i>
